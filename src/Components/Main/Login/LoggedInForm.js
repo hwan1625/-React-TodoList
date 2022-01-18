@@ -6,12 +6,18 @@ const LoggedInFormStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 15px;
-  .profile {
+  padding-bottom: 0px !important;
+  height: 195px;
+  .profile-img {
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
     border-radius: 50%;
+  }
+  .username {
+    text-align: center;
+    padding: 10px 0 0 0;
   }
   .logout-btn {
     display: flex;
@@ -22,30 +28,22 @@ const LoggedInFormStyled = styled.div`
       border-radius: 6px;
     }
   }
-  .outer-accounts {
-    display: flex;
-    justify-content: center;
-    li {
-      padding: 5px;
-    }
-  }
+  
 `;
 
-const LoggedInForm = () => {
-  const accounts = ["github", "kakao", "google", "naver"];
+const LoggedInForm = ({ accounts }) => {
   return (
     <LoggedInFormStyled>
-      <div className="profile">
+      <div className="profile-img">
 
+      </div>
+      <div className="username">
+        홍길동님! 환영합니다.
       </div>
       <div className="logout-btn">
         <button>로그아웃</button>
       </div>
-      <ul className="outer-accounts">
-        {accounts.map((account, id) => (
-          <li key={id}>{account}</li>
-        ))}
-      </ul>
+
     </LoggedInFormStyled>
   );
 }

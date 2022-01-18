@@ -3,19 +3,25 @@ import styled from 'styled-components';
 
 const LoginFormStyled = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 15px;
+  padding-bottom: 0px !important;
+  height: 195px;
   .login-box {
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    li {
-      span {
-        width: 40px;
+    ul {
+      margin: 0 auto;
+      width: 220px;
+      height: 120px;
+      border: 1px solid black;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      li {
+        span {
+          width: 40px;
+        }
       }
     }
   }
@@ -29,13 +35,14 @@ const LoginFormStyled = styled.div`
       border-radius: 6px;
     }
   }
+  
 `;
 
-const LoginForm = () => {
+const LoginForm = ({ accounts }) => {
   return (
     <LoginFormStyled>
-      <form action="">
-        <ul className="login-box">
+      <form action="" className="login-box">
+        <ul>
           <li>
             <span>ID</span>
             <input type="text" placeholder="아이디" />
@@ -50,6 +57,7 @@ const LoginForm = () => {
           <button>회원가입</button>
         </div>
       </form>
+
     </LoginFormStyled>
   );
 }

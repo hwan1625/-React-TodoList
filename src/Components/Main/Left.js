@@ -4,8 +4,10 @@ import Login from './Login/Login.js';
 import List from './List/List.js';
 
 const LeftStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 250px;
-  background: skyblue;
   height: calc(100vh - 32px);
 `;
 
