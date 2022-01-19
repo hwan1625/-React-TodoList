@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Clock from './Clock';
 import Weather from './Weather';
-import Widget from './Widget';
+import Widget from './Widget/Widget';
 
 const ListStyled = styled.div`
   width: 100%;
-  height: 100px;
+  height: 400px;
   border: 1px solid black;
 `;
 

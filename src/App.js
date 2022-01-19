@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 const Inner = styled.div`
   padding: 16px 100px;
+  display: flex;
 `;
 
 const App = () => {

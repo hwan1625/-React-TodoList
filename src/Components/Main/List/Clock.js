@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 
 const ClockStyled = styled.div`
-  border: 1px solid black;
   width: 100%;
-  font-size: 30px;
+  font-size: 45px;
+  font-weight: 600;
   text-align: center;
 `;
 
