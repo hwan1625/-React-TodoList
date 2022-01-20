@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Left from './Components/Main/Left';
 import Center from './Components/Main/Center';
 import Right from './Components/Main/Right';
@@ -15,13 +15,17 @@ const Inner = styled.div`
 `;
 
 const App = () => {
+  const [page, setPage] = useState("home");
+  const getPage = (p) => {
+    setPage(p);
+  }
   return (
     <>
       <GlobalStyle />
       <Inner>
-        <Left />
-        <Center />
-        <Right />
+        {/* <Left /> */}
+        <Center page={page} />
+        <Right getPage={getPage} />
       </Inner>
     </>
   );
